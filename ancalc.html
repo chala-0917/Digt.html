@@ -1,0 +1,65 @@
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive Scientific Calculator</title>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/10.6.4/math.js"></script>
+  <link rel="stylesheet" href="ancalc.css">
+</head>
+<body>
+  <div class="calculator">
+      <form action="#" name="calculator">
+    <input type="text" id="display" class="display" readonly placeholder="0"/>
+            
+    <div class="buttons">
+      <input type="button" value="1" onclick="display.value += '1'">
+      <input type="button" value="2" onclick="display.value += '2'">
+      <input type="button" value="3" onclick="display.value += '3'">
+      <input type="button" value="CE" id="poo" onclick="display.value = ''">
+      <input type="button" value="⌫" id="po" onclick="backspace()">
+      <input type="button" value="*" id="op" onclick="display.value += '*'">
+      
+      <input type="button" value="4" onclick="display.value += '4'">
+      <input type="button" value="8" onclick="display.value += '8'">
+      <input type="button" value="9" onclick="display.value += '9'">
+      <input type="button" value="+" id="op" onclick="display.value += '+'">
+      <input type="button" value="-" id="op" onclick="display.value += '-'">
+      <input type="button" value="/" id="op" onclick="display.value += '/'">
+      
+      
+      <input type="button" value="5" onclick="display.value += '5'">
+      <input type="button" value="6" onclick="display.value += '6'">
+      <input type="button" value="7" onclick="display.value += '7'">
+      
+      
+      <input type="button" value="!" id="ope" onclick="display.value += '!'">
+      <input type="button" value="." id="ope" onclick="addDecimal()">
+      <input type="button" value="," id="ope" onclick="display.value += ','">
+      <input type="button" value="0"  onclick="display.value += '0'">
+
+      <input type="button" value="%" id="ope" onclick="display.value += '%'">
+      <input type="button" value="cos" id="ope" onclick="display.value += 'cos('">
+      <input type="button" value="sin" id="ope" onclick="display.value += 'sin('">
+      <input type="button" value="tan" id="ope" onclick="display.value += 'tan('">
+
+      <input type="button" value="e" id="ope" onclick="display.value += 'e'">
+      <input type="button" value="π" id="ope" onclick="display.value += 'pi'">
+      <input type="button" value="^" id="ope" onclick="display.value += '^('">
+      <input type="button" value="(" id="ope" onclick="display.value += '('">
+      <input type="button" value=")" id="ope" onclick="display.value += ')'">
+      <input type="button" value="log" id="ope" onclick="display.value += 'log('">
+
+      <input type="button" value="√" id="ope" onclick="display.value += 'sqrt('">
+      <input type="button" value="log2" id="ope" onclick="display.value += 'log2('">
+      <input type="button" value="log10" id="ope" onclick="display.value += 'log10('">
+      <input type="button" value="l2e" id="ope" onclick="display.value += Math.LOG2E">
+      <input type="button" value="l10e" id="ope" onclick="display.value += Math.LOG10E">
+      <input type="button" value="exp" id="ope" onclick="display.value += 'exp('">
+
+      <input type="button" value="=" onclick="calculate()">
+    </div>
+    </form>
+  </div>
+  <script src="ancalc.js"></script>
+</body>
+</html>

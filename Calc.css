@@ -1,0 +1,266 @@
+    body{
+      align-items: center;
+      display: flex;
+      justify-content: center;
+      background: blue;
+      
+    }
+    .btr{
+      width: 450px;
+      height: 700px;
+      border-radius: 20px;
+      background: green;
+      text-align: center;
+      font-size: px;
+      padding-right: 5px;
+      font-weight: bold;
+      text-shadow: ;
+    
+      
+    }
+     .display{
+       background: tomato;
+       width: 450px;
+       height: 200px;
+       border-radius: 20px;
+       padding-bottom: 30px;
+       padding-top: 30px;
+       margin-bottom: 15px;
+       margin-top: 0px;
+       font-size: 50px;
+       text-align: left;
+       
+     }
+     .btnoperation{
+        border-radius: 15px;
+        width: 100px;
+        height: 70px;
+        border: none;
+        padding: 0px;
+        background: blue;
+        color: brown;
+        font-size: 35px;
+        font-style: italic;
+     }
+     .btndigit{
+       border-radius: 15px;
+        width: 100px;
+        height: 70px;
+        border: none;
+        padding: 5px;
+        background: skyblue;
+        color: black;
+        font-size: 30px;
+        padding-bottom: 20px;
+        padding-left: 10px;
+        font-style: italic;
+     }
+     .btnclear{
+       border-radius: 15px;
+        width: 100px;
+        height: 70px;
+        border: none;
+        background: pink;
+        background: purple;
+        font-size: 20px;
+        margin-top: 20px;
+        padding-bottom:10px;
+        font-style: italic;
+     }
+     .btndigit1{
+       border-radius: 15px;
+        width: 200px;
+        height: 70px;
+        border: none;
+        background: black;
+        background: pink;
+        font-size: 20px;
+        margin-top: 10px;
+        margin-left: 10px;
+        padding-bottom:-10px;
+        padding-right: 20px;
+     }
+        .btndigit2{
+       border-radius: 15px;
+        width: 200px;
+        height: 70px;
+        border: none;
+        background: indigo;
+        color: yellow;
+        font-size: 20px;
+        margin-top: 0px;
+        margin-left: 10px;
+        padding-bottom:10px;
+        padding-right: 20px;
+     }
+     .box1{
+       width: 250px;
+       height: 250px;
+       background: red;
+       margin-left: 450px;
+       font-size: 200px;
+       padding-top: 10px;
+       text-align: center;
+       transform: translateX( 50px);
+       transform: translateY( 50px);
+       transform: rotate(180deg);
+       transform: rotateX(180deg);
+       transform: rotateY(180deg);
+       transform: rotateZ(180deg);
+       transform: scaleX(2);
+       transform: scaleY(2);
+      transform: scale(2,2);
+      transform: skew(45deg);
+      transform: skew(45deg);
+      transform: skew(20deg, 20deg);
+     }
+     .box1:hover{
+       background: green;
+     }
+     .box1:active{
+       background: black;
+     }
+     body{ 
+  background: grey;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+.as{
+  border-radius: 30px;
+  padding: 12px 20px;
+}
+
+ .dij{
+        background: green;
+        width: 400px;
+        height: 400px;
+        border-radius: 20px;
+        box-shadow: 0, 0, 20px blue;
+        font-size: 14px;
+        text-align: center;
+        tr
+ }
+       #num1{
+        background: skyblue;
+        width: 300px;
+        border-radius: 10px;
+        font-size: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        color: red;
+        box-shadow: 0, 0, 10px red;
+}
+     #num2{
+        background: skyblue;
+        width: 300px;
+        border-radius: 5px;
+        color: yellow;
+        font-size: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+     }
+     #result{
+       background: tomato;
+        width: 300px;
+        border-radius: 5px;
+        color: yellow;
+        font-size: 20px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+        display:center;
+        justify-content: center;
+     }
+
+     .gimn{
+       
+        width: 300px;
+        border-radius: 5px;
+        color: yellow;
+        font-size: 30px;
+        text-align: center;
+        padding-left: 20px;
+        padding-right: 20px;
+ }
+ #bo{
+   background: skyblue;
+        width: 100px;
+        border-radius: 10px;
+        font-size: 10px;
+        padding-top: 12px;
+        padding-bottom: 12px;
+        text-align: center;
+        margin-bottom: 10px;
+        margin-top: 10px;
+ }
+       .b1{
+            background-color: #ff1515;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            margin-bottom: 14px;
+            margin-top: 14px;
+            margin-left: 14px;
+            margin-right: 14px;
+            width: 200px;
+            height: 100px;
+            position: center;
+            
+        }
+        .b1:hover{
+        opacity: 0.3;
+     
+        }
+        .b1:active{
+     opacity: 0.3;
+        }
+        .b1:after{
+            opacity: 0.9;
+        }
+        .b2{
+                background-color: blue;
+            color: white;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 200px;
+            height: 100px;
+            margin-left: 14px;
+            margin-right: 14px;
+            
+        }
+          .b2:hover{
+            box-shadow: 10px 10px 10px  red;
+        }
+        .b2:active{
+            opacity: 0.3;
+        }
+        .b3{
+                    background-color: green;
+            color: whitesmoke;
+            border: none;
+            border-radius: 10px;
+            font-size: 20px;
+            width: 200px;
+           height: 100px;
+            margin-left: 14px;
+        }
+        .b3:hover{
+            opacity: 0.5;
+        }
+        .b3:active{
+            opacity: 0.5;
+        }y
+      
+       

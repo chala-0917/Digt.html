@@ -1,0 +1,94 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Math Practice Tool</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      padding: 30px;
+      background-color: #f0f4f8;
+    }
+    .container {
+      background: white;
+      border-radius: 10px;
+      padding: 20px;
+      display: inline-block;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    input {
+      padding: 10px;
+      font-size: 16px;
+      width: 80px;
+      margin: 10px;
+    }
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      margin-top: 10px;
+      cursor: pointer;
+    }
+    #feedback {
+      font-weight: bold;
+      margin-top: 15px;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Math Practice Tool</h2>
+    <div id="problem">Loading...</div>
+    <input type="number" id="answer" placeholder="Your answer" />
+    <br>
+    <button onclick="checkAnswer()">Submit</button>
+    <div id="feedback"></div>
+    <br>
+    <button onclick="generateProblem()">Next Problem</button>
+  </div>
+
+  <script>
+    let correctAnswer;
+
+    function generateProblem() {
+      const operations = ['+', '-', '*', '/'];
+      const op = operations[Math.floor(Math.random() * operations.length)];
+
+      let num1 = Math.floor(Math.random() * 20) + 1;
+      let num2 = Math.floor(Math.random() * 20) + 1;
+
+      // Avoid division by zero and ensure integer division
+      if (op === '/') {
+        num1 = num1 * num2;
+      }
+
+      const problemText = `${num1} ${op} ${num2}`;
+      correctAnswer = eval(problemText);
+      if (op === '/') correctAnswer = Math.round(correctAnswer);
+
+      document.getElementById('problem').innerText = `Solve: ${problemText}`;
+      document.getElementById('answer').value = '';
+      document.getElementById('feedback').innerText = '';
+    }
+
+    function checkAnswer() {
+      const userAnswer = Number(document.getElementById('answer').value);
+      const feedback = document.getElementById('feedback');
+
+      if (userAnswer === correctAnswer) {
+        feedback.style.color = 'green';
+        feedback.innerText = '✅ Correct!';
+      } else {
+        feedback.style.color = 'red';
+        feedback.innerText = `❌ Incorrect. The correct answer is ${correctAnswer}`;
+      }
+    }
+
+    // Generate first problem on load
+    generateProblem();
+  </script>
+</body>
+</html>
+
