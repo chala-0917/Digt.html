@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Thermometer Example</title>
+  <style>
+    body {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Arial, sans-serif;
+      background: #eef1f7;
+      padding: 50px;
+    }
+
+    .thermometer {
+      position: relative;
+      width: 60px;
+      height: 300px;
+      background: #ddd;
+      border-radius: 30px;
+      box-shadow: inset 0 0 5px #aaa;
+      overflow: hidden;
+    }
+
+    .mercury {
+      position: absolute;
+      bottom: 0;
+      width: 100%;
+      background: linear-gradient(to top, red, #ff6666);
+      border-radius: 30px 30px 0 0;
+      transition: height 0.5s ease;
+    }
+
+    .bulb {
+      width: 80px;
+      height: 80px;
+      background: red;
+      border-radius: 50%;
+      position: absolute;
+      bottom: -40px;
+      left: 50%;
+      transform: translateX(-50%);
+      box-shadow: inset -2px -4px 10px rgba(0,0,0,0.2);
+    }
+
+    .temp-display {
+      margin-top: 20px;
+      font-size: 1.5rem;
+      font-weight: bold;
+    }
+
+    input[type="range"] {
+      margin-top: 30px;
+      width: 200px;
+    }
+  </style>
+  
+</head>
+<body>
+    
+
+  <h1>🌡️ Thermometer</h1>
+
+  <div class="thermometer">
+    <div class="mercury" id="mercury" style="height: 50%;"></div>
+    <div class="bulb"></div>
+  </div>
+
+  <div class="temp-display" id="tempLabel">Temperature: 50°C</div>
+
+  <input type="range" min="0" max="100" value="50" id="tempRange" oninput="updateTemp(this.value)"/>
+
+  <script>
+    function updateTemp(value) {
+      const mercury = document.getElementById('mercury');
+      const label = document.getElementById('tempLabel');
+      mercury.style.height = value + "%";
+      label.innerText = `Temperature: ${value}°C`;
+    }
+  </script>
+  
+  
+  

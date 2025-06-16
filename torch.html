@@ -1,0 +1,42 @@
+<button onclick="toggleFlashlight()">Toggle Flashlight</button>
+
+<script>
+let stream;
+let track;
+
+async function toggleFlashlight() {
+  if (!stream) {
+    try {
+      stream = await navigator.mediaDevices.getUserMedia({
+        video: {
+          facingMode: 'environment',
+          torch: true
+        }
+      });
+
+      track = stream.getVideoTracks()[0];
+      const imageCapture = new ImageCapture(track);
+      const capabilities = await imageCapture.getPhotoCapabilities();
+
+      if (capabilities.torch) {
+        await track.applyConstraints({
+          advanced: [{ torch: true }]
+        });
+        alert("Flashlight turned ON");
+      } else {
+        alert("Torch not supported on this device.");
+      }
+
+    } catch (err) {
+      console.error("Error accessing camera or torch:", err);
+      alert("Error: " + err.message);
+    }
+  } else {
+    track.stop();
+    stream = null;
+    alert("Flashlight turned OFF");
+  }
+}
+</script>
+</body>
+</html>
